@@ -4,9 +4,9 @@
     "applications": [
       {
         "name": "Wiki",
-        "description": "Confluence Wiki for Maven",
-        "link": "https://wiki.mavensecurities.com",
-        "image": "img/wiki.png"
+        "description": "Confluence Wiki",
+        "link": "https://wiki",
+        "image": "img/wiki.jpg"
       }
     ]
   },
@@ -15,14 +15,14 @@
     "applications": [
       {
         "name": "GitHub",
-        "description": "Maven's internal git code repository",
-        "link": "https://git.mavensecurities.com",
+        "description": "GitHub code repository",
+        "link": "https://git",
         "image": "img/git.png"
       },
       {
         "name": "Harbor",
-        "description": "Maven's internal Docker image repository",
-        "link": "https://registry.mavensecurities.com",
+        "description": "Docker image repository",
+        "link": "https://registry",
         "image": "img/harbor.png"
       }
     ]
