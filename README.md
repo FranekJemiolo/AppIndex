@@ -1,6 +1,6 @@
 # App Index
 
-App Index is a simple applications that generates a static webpage that
+App Index is a simple application that generates a static webpage that
 lists all of your applications listed in applications.json.
 
 
