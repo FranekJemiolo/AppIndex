@@ -1,0 +1,30 @@
+[
+  {
+    "category": "Documentation",
+    "applications": [
+      {
+        "name": "Wiki",
+        "description": "Confluence Wiki",
+        "link": "https://wiki",
+        "image": "img/wiki.jpg"
+      }
+    ]
+  },
+  {
+    "category": "Repositories",
+    "applications": [
+      {
+        "name": "GitHub",
+        "description": "GitHub code repository",
+        "link": "https://git",
+        "image": "img/git.png"
+      },
+      {
+        "name": "Harbor",
+        "description": "Docker image repository",
+        "link": "https://registry",
+        "image": "img/harbor.png"
+      }
+    ]
+  }
+]
