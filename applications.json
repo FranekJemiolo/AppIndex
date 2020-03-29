@@ -1,0 +1,30 @@
+[
+  {
+    "category": "Documentation",
+    "applications": [
+      {
+        "name": "Wiki",
+        "description": "Confluence Wiki for Maven",
+        "link": "https://wiki.mavensecurities.com",
+        "image": "img/wiki.png"
+      }
+    ]
+  },
+  {
+    "category": "Repositories",
+    "applications": [
+      {
+        "name": "GitHub",
+        "description": "Maven's internal git code repository",
+        "link": "https://git.mavensecurities.com",
+        "image": "img/git.png"
+      },
+      {
+        "name": "Harbor",
+        "description": "Maven's internal Docker image repository",
+        "link": "https://registry.mavensecurities.com",
+        "image": "img/harbor.png"
+      }
+    ]
+  }
+]
