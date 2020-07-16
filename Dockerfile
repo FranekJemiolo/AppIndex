@@ -12,4 +12,5 @@ RUN python generate_website.py
 FROM nginx:1.17.9 as server
 
 COPY img /usr/share/nginx/html/img
+copy js /usr/share/nginx/html/js
 COPY --from=builder /app/index.html /usr/share/nginx/html/

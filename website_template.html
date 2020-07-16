@@ -10,6 +10,7 @@
 </head>
 <body>
 
+
     <div class="container">
         <div class="row">
         {% for app_group in applications %}
@@ -18,7 +19,7 @@
                 <hr>
             </div>
             {% for app in app_group['applications'] %}
-            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2 appDiv">
                 <a href="{{ app['link'] }}">
                     <div class="card">
                         <img class="card-img-top" src="{{ app['image'] }}" alt="{{ app['name'] }}">
@@ -34,8 +35,38 @@
         </div>
     </div>
 
+    <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModal">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <input class="form-control" id="searchInput" type="text" placeholder="Search..">
+        </div>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/mousetrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#searchInput").on("keyup", function() {
+                if (event.key == "Enter") {
+                    $('#searchModal').modal('hide');
+                }
+                else {
+                    var value = $(this).val().toLowerCase();
+                    $(".appDiv").filter(function() {
+                        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+                    });
+                }
+            });
+
+            Mousetrap.bind('space', function() {
+                $("#searchModal").modal('show');
+            });
+
+            $("#searchModal").on('shown.bs.modal', function(){
+                $(this).find("#searchInput").focus();
+            });
+        });
+    </script>
 </body>
 </html>
